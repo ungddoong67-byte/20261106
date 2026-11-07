@@ -1,0 +1,488 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>인천퀵서비스 | 인천퀵·오토바이퀵·다마스·라보·화물배송</title>
+
+<meta name="description" content="인천퀵서비스 전문 배송! 인천 전 지역 오토바이퀵, 다마스, 라보, 1톤 화물 및 긴급배송 상담. 인천 중구, 남동구, 부평구, 연수구, 서구, 계양구 등 신속한 퀵서비스를 안내합니다.">
+
+<meta name="keywords" content="인천퀵서비스, 인천퀵, 인천오토바이퀵, 인천다마스퀵, 인천라보퀵, 인천화물, 인천용달, 인천당일배송, 인천긴급배송, 부평퀵서비스, 송도퀵서비스, 남동구퀵서비스, 서구퀵서비스">
+
+<meta name="robots" content="index,follow">
+<meta name="author" content="인천퀵서비스">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="인천퀵서비스 | 빠르고 편리한 배송">
+<meta property="og:description" content="인천 전 지역 오토바이퀵, 다마스, 라보, 화물배송 전문 서비스">
+<meta property="og:url" content="https://도메인주소/">
+<meta property="og:locale" content="ko_KR">
+
+<link rel="canonical" href="https://도메인주소/">
+
+<meta name="theme-color" content="#102a56">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, "Malgun Gothic", sans-serif;
+  color: #222;
+  line-height: 1.7;
+  word-break: keep-all;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  background: #102a56;
+  color: white;
+  padding: 16px 20px;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: 900;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+}
+
+.hero {
+  background: linear-gradient(135deg,#102a56,#1769aa);
+  color: white;
+  text-align: center;
+  padding: 85px 20px;
+}
+
+.hero h1 {
+  font-size: clamp(30px,5vw,48px);
+  margin: 0 0 20px;
+  line-height: 1.3;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.btn-yellow {
+  background: #ffcc35;
+  color: #17243a;
+}
+
+.btn-white {
+  background: white;
+  color: #102a56;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 65px 20px;
+}
+
+.section-title {
+  font-size: 30px;
+  color: #102a56;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.section-desc {
+  text-align: center;
+  color: #666;
+  margin-bottom: 35px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #e5eaf0;
+  padding: 25px;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.card h3 {
+  color: #12569b;
+  margin-top: 0;
+}
+
+.service-icon {
+  font-size: 32px;
+}
+
+.area {
+  background: #f4f7fb;
+}
+
+.area-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.area-list span {
+  padding: 10px 17px;
+  border-radius: 30px;
+  background: white;
+  border: 1px solid #dce5ef;
+  color: #173e69;
+}
+
+.highlight {
+  background: #102a56;
+  color: white;
+  text-align: center;
+  padding: 55px 20px;
+}
+
+.highlight h2 {
+  font-size: 30px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+}
+
+.faq-item h3 {
+  color: #12569b;
+}
+
+footer {
+  background: #101d32;
+  color: #ddd;
+  text-align: center;
+  padding: 35px 20px;
+  font-size: 13px;
+}
+
+.fixed-call {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 100;
+  background: #ffbf22;
+  color: #14243b;
+  padding: 14px 22px;
+  border-radius: 50px;
+  font-weight: bold;
+  box-shadow: 0 4px 15px #0003;
+}
+
+@media(max-width:600px) {
+  nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .hero {
+    padding: 65px 15px;
+  }
+
+  .container {
+    padding: 45px 18px;
+  }
+
+  .section-title {
+    font-size: 25px;
+  }
+}
+</style>
+
+<!-- Google 및 네이버 검색엔진용 구조화 데이터 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MovingCompany",
+  "name": "인천퀵서비스",
+  "url": "https://도메인주소/",
+  "description": "인천 지역 오토바이퀵, 다마스, 라보 및 화물 배송 서비스",
+  "areaServed": [
+    {"@type":"City","name":"인천광역시"},
+    {"@type":"AdministrativeArea","name":"인천 중구"},
+    {"@type":"AdministrativeArea","name":"인천 남동구"},
+    {"@type":"AdministrativeArea","name":"인천 부평구"},
+    {"@type":"AdministrativeArea","name":"인천 연수구"},
+    {"@type":"AdministrativeArea","name":"인천 서구"},
+    {"@type":"AdministrativeArea","name":"인천 계양구"}
+  ],
+  "hasOfferCatalog": {
+    "@type":"OfferCatalog",
+    "name":"퀵서비스 배송 상품",
+    "itemListElement":[
+      {
+        "@type":"OfferCatalog",
+        "name":"오토바이 퀵서비스"
+      },
+      {
+        "@type":"OfferCatalog",
+        "name":"다마스 배송"
+      },
+      {
+        "@type":"OfferCatalog",
+        "name":"라보 및 화물 배송"
+      }
+    ]
+  }
+}
+</script>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">🚚 인천퀵서비스</a>
+    <nav aria-label="주요 메뉴">
+      <a href="#service">서비스 안내</a>
+      <a href="#area">서비스 지역</a>
+      <a href="#faq">자주 묻는 질문</a>
+      <a href="#contact">상담 문의</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <h1>인천퀵서비스<br>
+  빠르고 편리한 배송의 시작</h1>
+
+  <p>
+    인천 전 지역 오토바이퀵 · 다마스 · 라보 · 화물배송<br>
+    고객님의 소중한 물건을 안전하게 배송해 드립니다.
+  </p>
+
+  <a href="tel:전화번호입력" class="btn btn-yellow">
+    📞 전화 상담하기
+  </a>
+
+  <a href="#service" class="btn btn-white">
+    서비스 알아보기
+  </a>
+</section>
+
+<section class="container">
+  <h2 class="section-title">인천퀵서비스 전문 배송 안내</h2>
+
+  <p class="section-desc">
+    인천퀵서비스는 고객의 배송 목적과 화물 크기에 맞춰
+    적합한 배송 수단을 안내하는 퀵서비스입니다.
+    일반 서류부터 소형 화물, 대형 물품까지
+    다양한 배송 상담을 제공합니다.
+  </p>
+
+  <div class="grid">
+    <article class="card">
+      <h3>신속한 배송 상담</h3>
+      <p>긴급 서류 및 소형 물품 배송에 적합한 오토바이퀵 서비스를 안내합니다.</p>
+    </article>
+
+    <article class="card">
+      <h3>다양한 배송 차량</h3>
+      <p>물품 크기와 중량에 맞춰 다마스, 라보, 화물차 배송을 안내합니다.</p>
+    </article>
+
+    <article class="card">
+      <h3>인천 전 지역 상담</h3>
+      <p>인천 주요 지역 및 인근 수도권 배송 요청을 상담합니다.</p>
+    </article>
+  </div>
+</section>
+
+<section id="service" class="area">
+  <div class="container">
+    <h2 class="section-title">인천퀵서비스 배송 종류</h2>
+
+    <p class="section-desc">
+      배송 물품에 따라 적합한 차량과 배송 방법을 선택하세요.
+    </p>
+
+    <div class="grid">
+      <article class="card">
+        <div class="service-icon">🏍️</div>
+        <h3>인천 오토바이퀵</h3>
+        <p>
+          서류, 소형 박스, 긴급 물품 등
+          빠른 이동이 필요한 배송에 적합합니다.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="service-icon">🚐</div>
+        <h3>인천 다마스퀵</h3>
+        <p>
+          오토바이에 적재하기 어려운 물품과
+          소형 화물 배송을 안내합니다.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="service-icon">🚚</div>
+        <h3>인천 라보퀵</h3>
+        <p>
+          부피가 있는 물품 및 적재 공간이
+          필요한 배송을 상담합니다.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="service-icon">📦</div>
+        <h3>인천 화물배송</h3>
+        <p>
+          다양한 중량과 크기의 화물에 맞춰
+          적합한 차량을 안내합니다.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="area" class="container">
+  <h2 class="section-title">인천 전 지역 퀵서비스</h2>
+
+  <p class="section-desc">
+    인천 주요 행정구역을 중심으로 배송 문의를 받고 있습니다.
+  </p>
+
+  <div class="area-list">
+    <span>인천 중구 퀵서비스</span>
+    <span>인천 동구 퀵서비스</span>
+    <span>인천 미추홀구 퀵서비스</span>
+    <span>인천 연수구 퀵서비스</span>
+    <span>인천 남동구 퀵서비스</span>
+    <span>인천 부평구 퀵서비스</span>
+    <span>인천 계양구 퀵서비스</span>
+    <span>인천 서구 퀵서비스</span>
+    <span>인천 강화군 퀵서비스</span>
+    <span>인천 옹진군 퀵서비스</span>
+  </div>
+
+  <h3 style="text-align:center;margin-top:35px;color:#173e69;">
+    송도 · 청라 · 영종도 · 부평 · 주안 · 구월동 · 남동공단
+  </h3>
+</section>
+
+<section class="highlight">
+  <h2>인천퀵서비스 배송 문의</h2>
+  <p>
+    출발지와 도착지, 물품 종류를 알려주시면<br>
+    적합한 배송 방법과 요금을 안내해 드립니다.
+  </p>
+  <a href="tel:전화번호입력" class="btn btn-yellow">
+    📞 지금 전화 상담
+  </a>
+</section>
+
+<section id="faq" class="container">
+  <h2 class="section-title">인천퀵서비스 자주 묻는 질문</h2>
+
+  <article class="faq-item">
+    <h3>Q. 인천 어느 지역까지 배송이 가능한가요?</h3>
+    <p>
+      인천 중구, 동구, 미추홀구, 연수구, 남동구,
+      부평구, 계양구, 서구 등 인천 주요 지역의
+      배송 가능 여부를 상담할 수 있습니다.
+    </p>
+  </article>
+
+  <article class="faq-item">
+    <h3>Q. 오토바이퀵과 다마스퀵의 차이는 무엇인가요?</h3>
+    <p>
+      오토바이퀵은 서류나 소형 물품에 적합하며,
+      다마스는 오토바이에 적재하기 어려운 물품을
+      운송할 때 적합합니다.
+    </p>
+  </article>
+
+  <article class="faq-item">
+    <h3>Q. 퀵서비스 요금은 어떻게 결정되나요?</h3>
+    <p>
+      출발지와 도착지의 거리, 물품의 크기와 무게,
+      차량 종류 및 배송 조건에 따라 달라집니다.
+    </p>
+  </article>
+
+  <article class="faq-item">
+    <h3>Q. 인천에서 서울이나 경기 지역도 배송 가능한가요?</h3>
+    <p>
+      인천 출발 서울 및 경기 지역 배송도
+      거리와 차량 조건에 따라 상담할 수 있습니다.
+    </p>
+  </article>
+</section>
+
+<section id="contact" class="area">
+  <div class="container" style="text-align:center">
+    <h2 class="section-title">인천퀵서비스 상담 및 문의</h2>
+
+    <p>
+      정확한 배송 요금과 가능 시간은 전화로 문의해 주세요.
+    </p>
+
+    <a href="tel:전화번호입력" class="btn btn-yellow">
+      📞 전화번호입력
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p><strong>인천퀵서비스</strong></p>
+  <p>인천 전 지역 퀵서비스 및 화물배송 상담</p>
+  <p>상호명: 실제 사업자 상호 입력</p>
+  <p>사업자 주소: 실제 사업장 주소 입력</p>
+  <p>전화번호: 실제 전화번호 입력</p>
+  <p>© 2026 인천퀵서비스. All Rights Reserved.</p>
+</footer>
+
+<a href="tel:전화번호입력" class="fixed-call">
+  📞 전화 상담
+</a>
+
+</body>
+</html>
