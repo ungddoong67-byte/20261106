@@ -1,4 +1,4 @@
-﻿<head>
+<head>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>가평퀵서비스</title>
 <meta name="description" content="24시 저렴한 가평퀵서비스, 가평퀵, 퀵배달, 퀵배송, 가평읍퀵, 설악면퀵, 청평면퀵, 상면퀵, 하면퀵, 조종면퀵, 북면퀵, 가평역퀵, 청평역퀵, 상천역퀵, 대성리역퀵, 자라섬퀵, 남이섬퀵, 아침고요수목원퀵, 쁘띠프랑스퀵, 청평호퀵, 가평터미널퀵, 가평군퀵서비스">
@@ -44,17 +44,57 @@ a.header-tel{border:3px solid #ffd02c;
 }
 }
 
+/* 모바일 전용 상단 고정 버튼 스타일 */
+.mobile-bottom-nav {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 9999;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.mobile-bottom-nav a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  color: #fff;
+}
+
+.mobile-bottom-nav .btn-call {
+  background-color: #2b82d9;
+}
+
+.mobile-bottom-nav .btn-kakao {
+  background-color: #fee500;
+  color: #000 !important;
+}
+
+/* 모바일 화면에서 상단 고정 바가 내용을 가리지 않도록 래퍼 여백 추가 */
+@media screen and (max-width: 768px) {
+  body {
+    padding-top: 50px;
+  }
+}
 
 </style>
 
 
 
 <body id="main" class="">
-  <!-- 모바일 전용 상단 고정 2구 버튼 -->
-  <div class="mobile-bottom-nav">
-    <a href="tel:1661-4262" class="btn-call">📞 전화연결 1661-4262</a>
-    <a href="https://open.kakao.com/o/szW31UMi" target="_blank" rel="noopener noreferrer" class="btn-kakao">💬 카카오톡 문의</a>
-  </div>
+
+<!-- 모바일 전용 상단 고정 2구 버튼 -->
+<div class="mobile-bottom-nav">
+  <a href="tel:1661-4262" class="btn-call">📞 전화연결 1661-4262</a>
+  <a href="https://open.kakao.com/o/szW31UMi" target="_blank" rel="noopener noreferrer" class="btn-kakao">💬 카카오톡 문의</a>
+</div>
+
 <div class="wrapper bg-cf">
 	<div class="wrapper-inner">
 
