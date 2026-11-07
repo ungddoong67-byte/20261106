@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="robots" content="index,follow">
+  <title>인천퀵서비스 | 오토바이·다마스·라보·1톤 화물 24시</title>
+  <meta name="description" content="인천 전 지역 24시간 퀵서비스. 중구, 연수구, 남동구, 부평구, 계양구, 서구 등 오토바이퀵·다마스·라보·1톤 화물 맞춤 배송. 카드결제 상담 가능.">
+  <meta name="keywords" content="인천퀵서비스, 인천퀵, 인천오토바이퀵, 인천다마스퀵, 인천라보퀵, 인천용달, 인천화물, 인천24시퀵, 송도퀵, 청라퀵, 부평퀵, 남동구퀵">
+  <meta name="theme-color" content="#102a56">
+  <!-- 실제 운영 도메인으로 변경 -->
+  <link rel="canonical" href="https://인천퀵서비스-실제도메인/">
+  <link rel="icon" href="/favicon.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="인천퀵서비스 24시 실시간 배송 상담">
+  <meta property="og:description" content="인천 전 지역 오토바이·다마스·라보·화물 퀵서비스">
+  <meta property="og:url" content="https://인천퀵서비스-실제도메인/">
+  <meta property="og:image" content="/images/og_image.webp">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CourierService",
+    "name":"에이플러스퀵서비스 인천",
+    "url":"https://인천퀵서비스-실제도메인/",
+    "telephone":"1661-4262",
+    "areaServed":{
+      "@type":"AdministrativeArea",
+      "name":"인천광역시 전 지역 및 수도권"
+    },
+    "openingHours":"Mo-Su 00:00-24:00",
+    "address":{
+      "@type":"PostalAddress",
+      "addressCountry":"KR",
+      "addressRegion":"인천광역시"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --navy:#102a56; --blue:#1769aa; --gold:#ffcf3f; --ink:#1c2b40;
+      --muted:#64748b; --vh:1vh;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-snap-type:y mandatory; }
+    body {
+      margin:0; color:var(--ink); background:#f4f7fb;
+      font-family:Arial,"Malgun Gothic","Apple SD Gothic Neo",sans-serif;
+      word-break:keep-all; -webkit-font-smoothing:antialiased;
+    }
+    a { color:inherit; }
+    .mobile-bottom-nav {
+      position:fixed; z-index:1000; left:0; right:0; bottom:0;
+      display:grid; grid-template-columns:1fr 1fr; gap:8px;
+      padding:9px 12px calc(9px + env(safe-area-inset-bottom));
+      background:rgba(255,255,255,.96); box-shadow:0 -5px 22px rgba(0,0,0,.12);
+      backdrop-filter:blur(10px);
+    }
+    .mobile-bottom-nav a {
+      display:flex; align-items:center; justify-content:center; min-height:48px;
+      border-radius:12px; text-decoration:none; font-size:14px; font-weight:900;
+    }
+    .btn-call { color:#17243a; background:var(--gold); }
+    .btn-kakao { color:#241d00; background:#fee500; }
+    .container { width:100%; }
+    .section {
+      position:relative; width:100%; height:calc(var(--vh) * 100);
+      min-height:540px; overflow:hidden; scroll-snap-align:start; scroll-snap-stop:always;
+      background:#102a56;
+    }
+    .section picture { display:block; width:100%; height:100%; }
+    .section-img {
+      display:block; width:100%; height:100%; object-fit:cover; object-position:center;
+    }
+    .section::after {
+      content:""; position:absolute; inset:0; pointer-events:none;
+      background:linear-gradient(180deg,rgba(5,18,40,.12) 25%,rgba(5,18,40,.68) 100%);
+    }
+    .content {
+      position:absolute; z-index:2; left:7%; right:7%; bottom:15%;
+      color:#fff; text-shadow:0 2px 12px rgba(0,0,0,.35);
+    }
+    .content h1 { margin:0 0 9px; font-size:clamp(34px,8vw,68px); line-height:1.12; letter-spacing:-1.5px; }
+    .content h2 { margin:0; font-size:clamp(19px,4.5vw,30px); line-height:1.4; font-weight:700; }
+    .content .eyebrow {
+      display:inline-block; margin-bottom:14px; padding:6px 11px;
+      border:1px solid rgba(255,255,255,.65); border-radius:99px;
+      font-size:11px; font-weight:900; letter-spacing:1.5px;
+    }
+    .slide-indicator {
+      position:absolute; z-index:4; top:18px; right:18px; color:#fff;
+      padding:7px 11px; border-radius:99px; background:rgba(0,0,0,.35);
+      font-size:12px; font-weight:800; backdrop-filter:blur(6px);
+    }
+    .scroll-cue {
+      position:absolute; z-index:4; bottom:82px; left:50%; transform:translateX(-50%);
+      color:#fff; font-size:11px; letter-spacing:1px; opacity:.85;
+      animation:bob 1.5s infinite;
+    }
+    @keyframes bob { 0%,100%{transform:translate(-50%,0)} 50%{transform:translate(-50%,7px)} }
+    .section-normal {
+      min-height:100vh; scroll-snap-align:start; padding:46px 18px 110px;
+      background:linear-gradient(180deg,#f3f7fc,#fff);
+    }
+    .normal-content { width:min(900px,100%); margin:0 auto; }
+    .normal-content h4 { margin:0 0 18px; text-align:center; font-size:14px; }
+    .normal-content h4 a { color:#1769aa; text-decoration:underline; text-underline-offset:4px; }
+    .normal-content h3 {
+      margin:0 0 14px; color:var(--navy); text-align:center;
+      font-size:clamp(22px,5vw,32px); line-height:1.35; letter-spacing:-.8px;
+    }
+    .lead { margin:0 auto 26px; max-width:680px; color:#526176; text-align:center; font-size:15px; line-height:1.8; }
+    .info-box {
+      margin:14px 0; padding:20px; border:1px solid #e4ebf3; border-radius:17px;
+      background:#fff; box-shadow:0 8px 24px rgba(16,42,86,.06);
+    }
+    .info-box h4 { margin:0 0 12px; color:var(--navy); text-align:left; font-size:17px; }
+    .info-box p { margin:8px 0; color:#4b5b70; font-size:14px; line-height:1.75; }
+    .info-box strong { color:#173d6c; }
+    .area-tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .area-tags span { padding:7px 11px; border-radius:99px; color:#194875; background:#edf5fc; font-size:12px; font-weight:800; }
+    .faq-item + .faq-item { border-top:1px solid #e8edf3; margin-top:14px; padding-top:14px; }
+    .site-footer {
+      margin-top:22px; padding:24px 18px; border-radius:17px;
+      color:#dce7f5; background:#102a56; text-align:center;
+    }
+    .site-footer p { margin:5px 0; font-size:12px; line-height:1.65; }
+    .site-footer .footer-company { color:#fff; font-size:15px; font-weight:900; }
+    .site-footer a { color:#ffdb62; text-decoration:none; }
+    @media (min-width:769px) {
+      .mobile-bottom-nav { left:50%; right:auto; bottom:20px; width:min(420px,calc(100% - 32px)); transform:translateX(-50%); border-radius:16px; }
+      .section { min-height:620px; }
+      .section picture { background:#102a56; }
+      .section-img { object-fit:cover; }
+      .content { left:max(8%,calc((100% - 1000px)/2)); right:8%; bottom:17%; }
+      .section-normal { padding-top:65px; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      html { scroll-behavior:auto; }
+      .scroll-cue { animation:none; }
+    }
+  </style>
+</head>
+<body>
+  <!-- 모바일 하단 고정 전화/카카오톡 버튼 -->
+  <nav class="mobile-bottom-nav" aria-label="빠른 문의">
+    <a href="tel:1661-4262" class="btn-call">📞 전화연결 1661-4262</a>
+    <a href="https://open.kakao.com/o/szW31UMi" target="_blank" rel="noopener noreferrer" class="btn-kakao">💬 카카오톡 문의</a>
+  </nav>
+
+  <main class="container" id="mainContainer">
+    <!-- 1~6번: 화면 전체를 사용하는 이미지 카드형 섹션 -->
+    <section class="section" id="section1" aria-label="인천퀵서비스 메인">
+      <picture>
+        <source media="(max-width: 768px)" srcset="/images/m_pb1.png">
+        <img src="/images/pb1.png" alt="인천퀵서비스 오토바이 다마스 라보 화물배송" class="section-img" fetchpriority="high">
+      </picture>
+      <div class="slide-indicator">01 / 07</div>
+      <div class="content">
+        <span class="eyebrow">INCHEON APLUS QUICK</span>
+        <h1>인천퀵서비스</h1>
+        <h2>인천 전 지역 24시 신속한 퀵배송</h2>
+      </div>
+      <div class="scroll-cue">아래로 스크롤 ↓</div>
+    </section>
+
+    <section class="section" id="section2" aria-label="인천 전 지역 신속 배송">
+      <picture>
+        <source media="(max-width: 768px)" srcset="/images/m_pb2.png">
+        <img src="/images/pb2.png" alt="인천 전 지역 신속한 퀵배송 서비스" class="section-img" loading="lazy">
+      </picture>
+      <div class="slide-indicator">02 / 07</div>
+      <div class="content">
+        <span class="eyebrow">FAST DELIVERY</span>
+        <h1>빠르고 정확하게</h1>
+        <h2>출발지부터 도착지까지 신속한 배송 상담</h2>
+      </div>
+    </section>
+
+    <section class="section" id="section3" aria-label="오토바이 다마스 라보 화물 운송">
+      <picture>
+        <source media="(max-width: 768px)" srcset="/images/m_pb3.png">
+        <img src="/images/pb3.png" alt="오토바이퀵 다마스 라보 1톤 화물 운송" class="section-img" loading="lazy">
+      </picture>
+      <div class="slide-indicator">03 / 07</div>
+      <div class="content">
+        <span class="eyebrow">MOTORCYCLE · DAMAS · LABO</span>
+        <h1>배송에 맞는 차량</h1>
+        <h2>오토바이퀵 · 다마스 · 라보 · 1톤 화물</h2>
+      </div>
+    </section>
+
+    <section class="section" id="section4" aria-label="기업 및 개인 카드 결제 상담">
+      <picture>
+        <source media="(max-width: 768px)" srcset="/images/m_pb4.png">
+        <img src="/images/pb4.png" alt="인천퀵서비스 기업 및 개인 카드결제 상담" class="section-img" loading="lazy">
+      </picture>
+      <div class="slide-indicator">04 / 07</div>
+      <div class="content">
+        <span class="eyebrow">BUSINESS · PERSONAL</span>
+        <h1>편리한 결제 상담</h1>
+        <h2>개인·법인 카드결제 및 증빙 문의 가능</h2>
+      </div>
+    </section>
+
+    <section class="section" id="section5" aria-label="24시간 연중무휴 퀵서비스">
+      <picture>
+        <source media="(max-width: 768px)" srcset="/images/m_pb5.png">
+        <img src="/images/pb5.png" alt="인천 24시간 연중무휴 야간 퀵서비스" class="section-img" loading="lazy">
+      </picture>
+      <div class="slide-indicator">05 / 07</div>
+      <div class="content">
+        <span class="eyebrow">24 HOURS · 365 DAYS</span>
+        <h1>언제든 배송 상담</h1>
+        <h2>365일 24시간 접수 및 배차 상담</h2>
+      </div>
+    </section>
+
+    <section class="section" id="section6" aria-label="인천 전 지역 서비스 안내">
+      <picture>
+        <source media="(max-width: 768px)" srcset="/images/m_pb6.png">
+        <img src="/images/pb6.png" alt="인천 중구 연수구 남동구 부평구 계양구 서구 퀵서비스" class="section-img" loading="lazy">
+      </picture>
+      <div class="slide-indicator">06 / 07</div>
+      <div class="content">
+        <span class="eyebrow">INCHEON SERVICE AREA</span>
+        <h1>인천 전 지역</h1>
+        <h2>송도 · 청라 · 영종도 · 부평 · 남동구 등</h2>
+      </div>
+    </section>
+
+    <!-- 7번째 카드: 상세 안내/SEO 본문 -->
+    <section class="section-normal" id="section7">
+      <div class="normal-content">
+        <h4><a href="#section1">인천퀵서비스 메인으로 돌아가기 ↑</a></h4>
+        <h3>🏍️ 인천 전 지역 24시 맞춤 퀵배송 시스템 🚚</h3>
+        <p class="lead">
+          배송 물품의 규격과 요청 사항, 출발지와 도착지를 확인하여
+          목적에 적합한 운송 수단을 안내해 드립니다.
+          인천에서 서울 및 경기 지역으로 이동하는 배송도 상담 가능합니다.
+        </p>
+
+        <div class="info-box">
+          <h4>🚚 인천퀵서비스 운송 차량 안내</h4>
+          <p><strong>🏍️ 오토바이퀵</strong> : 서류, 소형 박스, 긴급 전달이 필요한 물품 등 빠른 이동이 필요한 배송</p>
+          <p><strong>🚙 다마스퀵</strong> : 오토바이에 적재하기 어려운 박스, 소형 가전, 여러 개의 물품 등 차량 운송</p>
+          <p><strong>🚚 라보·1톤 화물</strong> : 부피가 크거나 적재 공간이 필요한 화물 및 사업장 물품 운송</p>
+        </div>
+
+        <div class="info-box">
+          <h4>💡 인천퀵배송 서비스 이용 안내</h4>
+          <p>출발지와 도착지, 물품 종류 및 크기를 기준으로 적합한 운송 수단을 상담합니다.</p>
+          <p>긴급 서류, 기업 물품, 매장 상품, 소형 화물 등 다양한 배송 요청을 접수합니다.</p>
+          <p>차량 종류와 이동 거리, 물품 조건에 따라 배차 가능 여부와 예상 운임을 안내합니다.</p>
+        </div>
+
+        <div class="info-box">
+          <h4>📍 인천 주요 서비스 지역</h4>
+          <p>인천광역시 주요 행정구역과 생활권을 중심으로 배송 가능 여부를 확인해 드립니다.</p>
+          <div class="area-tags">
+            <span>중구</span><span>동구</span><span>미추홀구</span><span>연수구</span>
+            <span>남동구</span><span>부평구</span><span>계양구</span><span>서구</span>
+            <span>강화군</span><span>옹진군</span><span>송도</span><span>청라</span>
+            <span>영종도</span><span>주안</span><span>구월동</span><span>남동공단</span>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <h4>🕒 24시간 연중무휴 접수 안내</h4>
+          <p><strong>주간 배송</strong> : 기업·사무실 서류, 매장 상품 및 일반 퀵배송 상담</p>
+          <p><strong>야간 배송</strong> : 야간 시간대 긴급 물품 및 사전 협의된 배송 상담</p>
+          <p><strong>주말·공휴일</strong> : 접수 가능 여부와 기사 배정 상황을 확인한 뒤 안내합니다.</p>
+        </div>
+
+        <div class="info-box">
+          <h4>❓ 자주 묻는 질문 (FAQ)</h4>
+          <div class="faq-item">
+            <p><strong>Q. 인천 어느 지역까지 배송이 가능한가요?</strong><br>
+            A. 인천 중구, 동구, 미추홀구, 연수구, 남동구, 부평구, 계양구, 서구 등 주요 지역의 배송 가능 여부를 상담할 수 있습니다.</p>
+          </div>
+          <div class="faq-item">
+            <p><strong>Q. 오토바이와 다마스 중 어떤 차량을 선택해야 하나요?</strong><br>
+            A. 서류나 소형 물품은 오토바이, 부피가 있거나 차량 적재가 필요한 물품은 다마스·라보 등을 상담해 주세요.</p>
+          </div>
+          <div class="faq-item">
+            <p><strong>Q. 퀵서비스 요금은 어떻게 결정되나요?</strong><br>
+            A. 출발지와 도착지의 거리, 물품의 크기와 무게, 차량 종류 및 배송 조건에 따라 달라집니다. 접수 시 확인해 드립니다.</p>
+          </div>
+          <div class="faq-item">
+            <p><strong>Q. 카드 결제가 가능한가요?</strong><br>
+            A. 개인 및 법인 카드결제 가능 여부와 증빙 발행은 접수 단계에서 문의해 주세요. 부가세 등 결제 조건을 함께 안내합니다.</p>
+          </div>
+        </div>
+
+        <footer class="site-footer">
+          <p class="footer-company">상호: 에이플러스퀵서비스</p>
+          <p>대표전화: <a href="tel:1661-4262">1661-4262</a></p>
+          <p>카카오톡: <a href="https://open.kakao.com/o/szW31UMi" target="_blank" rel="noopener noreferrer">채팅 상담하기</a></p>
+          <p>365일 24시간 퀵서비스 접수 및 배차 상담</p>
+          <p>Copyright © 에이플러스퀵서비스 All Rights Reserved.</p>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // iOS Safari 주소창 높이 변화에 대응하는 실제 화면 높이
+    function setRealVh() {
+      document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + 'px');
+    }
+    window.addEventListener('resize', setRealVh, { passive:true });
+    window.addEventListener('orientationchange', setRealVh);
+    setRealVh();
+  </script>
+</body>
+</html>
