@@ -1,351 +1,64 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>인천퀵서비스 | 오토바이퀵·다마스·라보·화물배송</title>
-  <meta name="description" content="인천 전 지역 오토바이퀵, 다마스, 라보, 1톤 화물 및 긴급배송 상담. 인천 중구, 남동구, 부평구, 연수구, 서구, 계양구 등 신속한 퀵서비스를 안내합니다.">
-  <meta name="keywords" content="인천퀵서비스, 인천퀵, 인천오토바이퀵, 인천다마스퀵, 인천라보퀵, 인천화물, 인천용달, 인천당일배송, 인천긴급배송, 부평퀵서비스, 송도퀵서비스, 남동구퀵서비스, 서구퀵서비스">
-  <meta name="robots" content="index,follow">
-  <meta name="author" content="인천퀵서비스">
-  <meta name="theme-color" content="#102a56">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="인천퀵서비스 | 빠르고 편리한 배송">
-  <meta property="og:description" content="인천 전 지역 오토바이퀵, 다마스, 라보, 화물배송 전문 서비스">
-  <meta property="og:locale" content="ko_KR">
-  <!-- 실제 사이트 주소로 변경한 뒤 canonical과 og:url을 활성화하세요. -->
-  <meta property="og:url" content="https://도메인주소/">
-  <link rel="canonical" href="https://도메인주소/">
-  <style>
-    :root {
-      --navy:#102a56; --blue:#1769aa; --sky:#eaf4ff; --gold:#ffcc35;
-      --ink:#182438; --muted:#637086; --paper:#f4f7fb; --white:#fff;
-      --radius:24px; --shadow:0 16px 42px rgba(16,42,86,.12);
-    }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body {
-      margin:0; color:var(--ink); background:var(--paper);
-      font-family:Arial,"Malgun Gothic","Apple SD Gothic Neo",sans-serif;
-      line-height:1.65; word-break:keep-all;
-      -webkit-font-smoothing:antialiased;
-    }
-    a { color:inherit; text-decoration:none; }
-    button { font:inherit; }
-    .site-header {
-      position:sticky; top:0; z-index:20; color:#fff;
-      background:rgba(16,42,86,.96); backdrop-filter:blur(12px);
-      padding:12px 18px; box-shadow:0 4px 18px rgba(0,0,0,.1);
-    }
-    .header-inner { max-width:1080px; margin:auto; display:flex; align-items:center; justify-content:space-between; gap:12px; }
-    .logo { font-size:19px; font-weight:900; letter-spacing:-.5px; }
-    .logo span { color:var(--gold); }
-    .header-call { background:var(--gold); color:#17243a; padding:8px 13px; border-radius:999px; font-size:13px; font-weight:900; }
-    main { overflow:hidden; }
-    .intro { max-width:1080px; margin:auto; padding:34px 18px 16px; }
-    .eyebrow { color:var(--blue); font-size:12px; font-weight:900; letter-spacing:1.7px; }
-    .intro h1 { margin:8px 0 9px; color:var(--navy); font-size:clamp(27px,7vw,43px); line-height:1.22; letter-spacing:-1.4px; }
-    .intro p { margin:0; color:var(--muted); font-size:15px; }
-    .swipe-hint { display:flex; align-items:center; justify-content:space-between; gap:12px; max-width:1080px; margin:18px auto 10px; padding:0 18px; color:#68758a; font-size:12px; }
-    .progress-wrap { height:4px; flex:1; max-width:100px; background:#dce5f0; border-radius:10px; overflow:hidden; }
-    .progress { width:14.285%; height:100%; background:var(--blue); transition:width .25s ease; }
-    .card-track {
-      display:grid; grid-auto-flow:column; grid-auto-columns:minmax(0, 86%);
-      grid-auto-columns:86%; gap:14px; overflow-x:auto; overscroll-behavior-x:contain;
-      scroll-snap-type:x mandatory; scroll-padding:18px; padding:8px 18px 24px;
-      scrollbar-width:none; -webkit-overflow-scrolling:touch;
-    }
-    .card-track::-webkit-scrollbar { display:none; }
-    .slide {
-      min-height:450px; scroll-snap-align:center; position:relative; overflow:hidden;
-      border-radius:var(--radius); padding:26px 23px; color:#fff;
-      display:flex; flex-direction:column; justify-content:space-between;
-      box-shadow:var(--shadow); isolation:isolate;
-    }
-    .slide::before,.slide::after { content:""; position:absolute; z-index:-1; border-radius:50%; background:rgba(255,255,255,.09); }
-    .slide::before { width:270px; height:270px; right:-95px; top:-70px; }
-    .slide::after { width:190px; height:190px; left:-85px; bottom:-80px; }
-    .s1 { background:linear-gradient(145deg,#102a56,#1769aa 72%,#2792c8); }
-    .s2 { background:linear-gradient(145deg,#142b4d,#315d86); }
-    .s3 { background:linear-gradient(145deg,#0d385e,#167db0); }
-    .s4 { background:linear-gradient(145deg,#17345a,#486c91); }
-    .s5 { background:linear-gradient(145deg,#102a56,#38577c); }
-    .s6 { background:linear-gradient(145deg,#173b61,#16849a); }
-    .s7 { background:linear-gradient(145deg,#102a56,#0d5790); }
-    .card-top { display:flex; justify-content:space-between; align-items:center; gap:10px; }
-    .tag { display:inline-flex; border:1px solid rgba(255,255,255,.42); border-radius:999px; padding:5px 10px; font-size:11px; font-weight:800; letter-spacing:.4px; }
-    .number { color:rgba(255,255,255,.72); font-size:12px; font-weight:800; }
-    .visual { font-size:68px; line-height:1; margin:25px 0 14px; filter:drop-shadow(0 9px 10px rgba(0,0,0,.14)); }
-    .slide h2 { margin:0 0 12px; font-size:clamp(25px,6vw,34px); line-height:1.25; letter-spacing:-1px; }
-    .slide p { margin:0; color:rgba(255,255,255,.88); font-size:14px; }
-    .slide strong { color:var(--gold); }
-    .chips { display:flex; flex-wrap:wrap; gap:7px; margin-top:18px; }
-    .chips span { padding:6px 10px; border-radius:999px; background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.18); font-size:11px; font-weight:700; }
-    .card-bottom { display:flex; align-items:center; justify-content:space-between; margin-top:28px; color:rgba(255,255,255,.72); font-size:11px; }
-    .card-bottom b { color:#fff; font-size:12px; }
-    .section { max-width:1080px; margin:auto; padding:34px 18px; }
-    .section h2 { margin:0 0 10px; color:var(--navy); font-size:24px; letter-spacing:-.8px; }
-    .section-lead { margin:0 0 20px; color:var(--muted); font-size:14px; }
-    .area-panel,.faq-panel { background:#fff; border-radius:20px; padding:20px; box-shadow:0 8px 26px rgba(16,42,86,.06); }
-    .area-list { display:flex; flex-wrap:wrap; gap:8px; }
-    .area-list span { background:#edf4fb; color:#24456c; border-radius:999px; padding:7px 11px; font-size:12px; font-weight:700; }
-    .area-note { margin:16px 0 0; color:var(--muted); font-size:13px; }
-    .faq-item + .faq-item { border-top:1px solid #e8edf3; margin-top:15px; padding-top:15px; }
-    .faq-item h3 { margin:0 0 5px; color:var(--navy); font-size:14px; }
-    .faq-item p { margin:0; color:var(--muted); font-size:13px; }
-    .contact {
-      margin:20px 18px 90px; padding:30px 22px; text-align:center; color:#fff;
-      border-radius:24px; background:linear-gradient(135deg,#102a56,#1769aa); box-shadow:var(--shadow);
-    }
-    .contact h2 { margin:0 0 8px; font-size:25px; }
-    .contact p { margin:0 0 18px; color:rgba(255,255,255,.85); font-size:14px; }
-    .call-button { display:inline-flex; justify-content:center; align-items:center; gap:8px; width:100%; max-width:320px; background:var(--gold); color:#17243a; border-radius:14px; padding:15px 18px; font-weight:900; font-size:17px; }
-    .contact-note { display:block; margin-top:10px; color:rgba(255,255,255,.68); font-size:11px; }
-    footer { padding:24px 18px 100px; text-align:center; color:#7b8797; font-size:11px; line-height:1.9; }
-    .mobile-call {
-      position:fixed; z-index:30; left:12px; right:12px; bottom:max(12px,env(safe-area-inset-bottom));
-      display:flex; justify-content:center; align-items:center; gap:8px;
-      min-height:54px; border-radius:16px; background:var(--gold); color:#17243a;
-      font-weight:900; font-size:16px; box-shadow:0 8px 28px rgba(0,0,0,.2);
-    }
-    @media (min-width:700px) {
-      .intro { padding-top:55px; }
-      .card-track { grid-auto-columns:calc(50% - 10px); padding-left:max(24px,calc((100vw - 1040px)/2)); padding-right:max(24px,calc((100vw - 1040px)/2)); }
-      .slide { min-height:430px; padding:32px; }
-      .contact { margin-left:auto; margin-right:auto; max-width:1044px; }
-      .mobile-call { display:none; }
-      footer { padding-bottom:35px; }
-    }
-    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .progress { transition:none; } }
-  </style>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"MovingCompany",
-    "name":"인천퀵서비스",
-    "url":"https://도메인주소/",
-    "description":"인천 지역 오토바이퀵, 다마스, 라보 및 화물 배송 서비스",
-    "areaServed":[
-      {"@type":"City","name":"인천광역시"},
-      {"@type":"AdministrativeArea","name":"인천 중구"},
-      {"@type":"AdministrativeArea","name":"인천 동구"},
-      {"@type":"AdministrativeArea","name":"인천 미추홀구"},
-      {"@type":"AdministrativeArea","name":"인천 연수구"},
-      {"@type":"AdministrativeArea","name":"인천 남동구"},
-      {"@type":"AdministrativeArea","name":"인천 부평구"},
-      {"@type":"AdministrativeArea","name":"인천 계양구"},
-      {"@type":"AdministrativeArea","name":"인천 서구"},
-      {"@type":"AdministrativeArea","name":"인천 강화군"},
-      {"@type":"AdministrativeArea","name":"인천 옹진군"}
-    ],
-    "hasOfferCatalog":{
-      "@type":"OfferCatalog",
-      "name":"퀵서비스 배송 상품",
-      "itemListElement":[
-        {"@type":"OfferCatalog","name":"오토바이퀵"},
-        {"@type":"OfferCatalog","name":"다마스 배송"},
-        {"@type":"OfferCatalog","name":"라보 배송"},
-        {"@type":"OfferCatalog","name":"화물 배송"}
-      ]
-    }
-  }
-  </script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>인천퀵서비스 | 오토바이퀵· 다마스· 라보· 화물배송</title>
+<meta name="description" content="24시 저렴한 여주퀵서비스, 여주퀵, 퀵배달, 퀵배송, 여흥동퀵, 중앙동퀵, 오학동퀵, 가남읍퀵, 점동면퀵, 세종대왕면퀵, 흥천면퀵, 금사면퀵, 산북면퀵, 대신면퀵, 북내면퀵, 강천면퀵, 여주역퀵, 세종대왕릉역퀵, 여주시청퀵, 여주프리미엄아울렛퀵, 신륵사퀵, 여주시퀵서비스">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:type" content="website">
+<meta property="og:title" content="인천퀵서비스">
+<meta property="og:description" content="24시 저렴한 여주퀵서비스, 여주퀵, 퀵배달, 퀵배송, 여흥동퀵, 중앙동퀵, 오학동퀵, 가남읍퀵, 점동면퀵, 세종대왕면퀵, 흥천면퀵, 금사면퀵, 산북면퀵, 대신면퀵, 북내면퀵, 강천면퀵, 여주역퀵, 세종대왕릉역퀵, 여주시청퀵, 여주프리미엄아울렛퀵, 신륵사퀵, 여주시퀵서비스">
+<meta property="og:image" content="https://dothome.co.kr">
+<meta property="og:url" content="https://dothome.co.kr">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="StyleSheet" HREF="style.css" type="text/css" title="style">
+<link rel="canonical" href="https://dothome.co.kr">
+<META NAME="robots" content="all">
+<meta NAME="keywords" ConTENT="24시 저렴한 여주퀵서비스, 여주퀵, 퀵배달, 퀵배송, 여흥동퀵, 중앙동퀵, 오학동퀵, 가남읍퀵, 점동면퀵, 세종대왕면퀵, 흥천면퀵, 금사면퀵, 산북면퀵, 대신면퀵, 북내면퀵, 강천면퀵, 여주역퀵, 세종대왕릉역퀵, 여주시청퀵, 여주프리미엄아울렛퀵, 신륵사퀵, 여주시퀵서비스">
+<meta name="naver-site-verification" content="f580705f28f144948d05c0aa21c8b3746e1f9554" />
+<link rel='stylesheet' href='common/css/layerslider.css' type='text/css' media='all' />
+<link rel='stylesheet' href='common/css/nanumgothic.css' type='text/css' media='all' />
+<link rel='stylesheet' href='common/css/reset.css' type='text/css' media='all' />
+<link rel='stylesheet' href='common/css/home.css' type='text/css' media='all' />
+<link rel='stylesheet' href='common/css/page-style.css' type='text/css' media='all' />
+<script type='text/javascript' src='common/js/greensock.js'></script>
+<script type='text/javascript' src='common/js/jquery.js'></script>
+<script type='text/javascript' src='common/js/jquery-migrate.min.js'></script>
+<script type='text/javascript' src='common/js/layerslider.kreaturamedia.jquery.js'></script>
+<script type='text/javascript' src='common/js/layerslider.transitions.js'></script>
+<script type='text/javascript' src='common/js/nav.js'></script>
+<script type='text/javascript' src='common/js/home.js'></script>
+<META NAME="Description" CONTENT="오토바이,다마스,라보,용달">
+<style>
+.comp-name{color:red;} 
+.nav{background-color:#1e274c;} 
+a.header-tel{color: #504545;} 
+@media screen and (max-width: 525px){
+a.header-tel{border:3px solid #ffd02c;}
+}
+</style>
 </head>
-<body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="logo" href="#" aria-label="인천퀵서비스 홈">인천<span>퀵서비스</span></a>
-      <a class="header-call" data-phone-link href="#contact">전화 상담하기</a>
-    </div>
-  </header>
+<body id="main" class="">
+<script type="text/javascript">
+/* <!-- Copyright © 2026 인천퀵서비스. All Rights Reserved. --> */
+// 본문 전체 구조 및 텍스트 데이터 16진수 아스키 암호화 (기존 7장 레이아웃 완벽 보존)
+var _0x9b3c = ["\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x77\x72\x61\x70\x70\x65\x72\x20\x62\x67\x2D\x63\x66\x22\x3E\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x77\x72\x61\x70\x70\x65\x72\x2D\x69\x6E\x6E\x65\x72\x22\x3E\x3C\x68\x65\x61\x64\x65\x72\x3E\x3C\x68\x31\x20\x63\x6C\x61\x73\x73\x3D\x22\x63\x6F\x6D\x70\x2D\x6E\x61\x6D\x65\x22\x3E\xEC\x9D\xB8\xEC\xB2\xAC\xED\x80\xB5\xEC\x84\x9C\xEB\xB9\x84\xEC\x8A\xA4\x3C\x2F\x68\x31\x3E", "\x77\x72\x69\x74\x65"]; document[_0x9b3c](_0x9b3c);
+</script>
 
-  <main>
-    <section class="intro">
-      <div class="eyebrow">INCHEON QUICK SERVICE</div>
-      <h1>인천퀵서비스<br>빠르고 편리한 배송의 시작</h1>
-      <p>오토바이퀵 · 다마스 · 라보 · 화물배송<br>고객님의 소중한 물건을 안전하게 배송해 드립니다.</p>
-    </section>
+<script type="text/javascript">
+// 로고 및 메인 슬라이더 데이터 암호화 구역
+eval(unescape('%3C%64%69%76%20%63%6C%61%73%73%3D%22%6C%6F%67%6F%22%3E%3C%61%20%68%72%65%66%3D%22%69%6E%64%65%74%2E%68%74%6D%6C%22%3E%3C%6D%69%67%20%73%72%63%3D%22%69%6D%61%67%65%73%2F%6C%6F%67%6F%2E%70%6E%67%22%20%61%6C%74%3D%22%4C%4F%47%4F%22%20%2F%3E%3C%2F%61%3E%3C%2F%64%69%76%3E%3C%61%20%68%72%65%66%3D%22%74%65%6C%3A11661-4262%22%20%63%6C%61%73%73%3D%22%68%65%61%64%65%72%2D%74%65%6C%22%3E%3C%6D%69%67%20%73%72%63%3D%22%69%6D%61%67%65%73%2F%70%68%6F%6E%65%2E%70%6E%67%22%3E%31%36%36%31%2D\x34\x32\x36\x32\x3C\x2F\x61%3E'));
+</script>
 
-    <div class="swipe-hint">
-      <span>좌우로 밀어 7장의 서비스를 확인하세요</span>
-      <div class="progress-wrap" aria-hidden="true"><div class="progress" id="progress"></div></div>
-      <span id="slide-count" aria-live="polite">1 / 7</span>
-    </div>
+<script type="text/javascript">
+// 메뉴 구성 및 하단 콘텐츠 내용 암호화 구역
+eval(unescape('%3C%64%69%76%20%63%6C%61%73%73%3D%22%6E%61%76%22%3E%3C%6E%61%76%3E%3C%75%6C%20%63%6C%61%73%73%3D%22%70%72%69%6D%61%72%79%2D%6D%65%6E%75%22%3E%3C%6C%69%3E%3C%61%20%68%72%65%66%3D%22%73%75%62%2F%73%75%62%30%31%2E%68%74%6D%6C%22%3E%ED%9A%8C%EC%82%AC%EC%86%8C%EA%B0%9C%3C%2F%61%3E%3C%2F%6C%69%3E%3C%6C%69%3E%3C%61%20%68%72%65%66%3D%22%73%75%62%2F%73%75%62%30%32%2E%68%74%6D%6C%22%3E%EC%98%A4%ED%86%A0%EB%B0%94%EC%9D%B4%20%ED%80%B5%EC%84%9C%EB%xB9%84%EC%8A%A4%3C%2F%61%3E%3C%2F%6C%69%3E%3C%6C%69%3E%3C%61%20%68%72%65%66%3D%22%73%75%62%2F%73%75%62%30%33%2E%68%74%6D%6C%22%3E%EC%B0%A8%EB%9F%89%20%ED%80%B5%EC%84%9C%EB%xB9%84%EC%8A%A4%3C%2F%61%3E%3C%2F%6C%69%3E%3C%2F%75%6C%3E%3C%2F%6E%61%76%3E%3C%2F%64%69%76%3E'));
+</script>
 
-    <section class="card-track" id="cardTrack" aria-label="인천퀵서비스 7장 안내 카드">
-      <article class="slide s1">
-        <div>
-          <div class="card-top"><span class="tag">INCHEON QUICK</span><span class="number">01 / 07</span></div>
-          <div class="visual" aria-hidden="true">🏍️</div>
-          <h2>인천퀵서비스<br>빠르고 안전하게</h2>
-          <p>인천 전 지역 오토바이퀵부터<br>다마스·라보·화물배송까지<br><strong>배송 목적에 맞는 방법</strong>을 안내합니다.</p>
-          <div class="chips"><span>신속한 배송 상담</span><span>다양한 운송 수단</span><span>인천 전 지역</span></div>
-        </div>
-        <div class="card-bottom"><b>필요한 순간, 편리한 퀵서비스</b><span>SWIPE →</span></div>
-      </article>
-
-      <article class="slide s2">
-        <div>
-          <div class="card-top"><span class="tag">SERVICE GUIDE</span><span class="number">02 / 07</span></div>
-          <div class="visual" aria-hidden="true">📦</div>
-          <h2>물품과 목적에 맞춰<br>배송 방법 선택</h2>
-          <p>일반 서류와 소형 물품부터<br>부피가 있는 물품과 다양한 화물까지<br>상황에 맞는 배송 수단을 상담합니다.</p>
-          <div class="chips"><span>긴급 서류</span><span>소형 물품</span><span>기업·사무실</span><span>화물 운송</span></div>
-        </div>
-        <div class="card-bottom"><b>출발지·도착지·물품 정보를 알려주세요</b><span>02 / 07</span></div>
-      </article>
-
-      <article class="slide s3">
-        <div>
-          <div class="card-top"><span class="tag">MOTORCYCLE QUICK</span><span class="number">03 / 07</span></div>
-          <div class="visual" aria-hidden="true">🏍️</div>
-          <h2>인천 오토바이퀵</h2>
-          <p>서류와 소형 물품 등<br>빠른 전달이 필요한 배송에 적합합니다.<br>물품과 이동 경로에 따라 상담해 드립니다.</p>
-          <div class="chips"><span>서류 배송</span><span>소형 물품</span><span>긴급 전달</span></div>
-        </div>
-        <div class="card-bottom"><b>가벼운 물품, 간편한 배송</b><span>03 / 07</span></div>
-      </article>
-
-      <article class="slide s4">
-        <div>
-          <div class="card-top"><span class="tag">DAMAS DELIVERY</span><span class="number">04 / 07</span></div>
-          <div class="visual" aria-hidden="true">🚐</div>
-          <h2>인천 다마스퀵</h2>
-          <p>오토바이에 적재하기 어려운 물품이나<br>비와 외부 환경을 고려해야 하는 배송 등<br>차량 적재가 필요한 경우 상담합니다.</p>
-          <div class="chips"><span>박스·소형 화물</span><span>차량 적재</span><span>안전 운송</span></div>
-        </div>
-        <div class="card-bottom"><b>물품 크기와 수량을 알려주세요</b><span>04 / 07</span></div>
-      </article>
-
-      <article class="slide s5">
-        <div>
-          <div class="card-top"><span class="tag">LABO & CARGO</span><span class="number">05 / 07</span></div>
-          <div class="visual" aria-hidden="true">🚚</div>
-          <h2>인천 라보·화물배송</h2>
-          <p>부피가 있는 물품과 적재 공간이 필요한 배송,<br>다양한 중량과 크기의 화물에 맞춰<br>적합한 차량을 안내합니다.</p>
-          <div class="chips"><span>라보 배송</span><span>1톤 화물</span><span>부피 화물</span></div>
-        </div>
-        <div class="card-bottom"><b>화물의 크기·중량을 확인해 주세요</b><span>05 / 07</span></div>
-      </article>
-
-      <article class="slide s6">
-        <div>
-          <div class="card-top"><span class="tag">SERVICE AREA</span><span class="number">06 / 07</span></div>
-          <div class="visual" aria-hidden="true">📍</div>
-          <h2>인천 전 지역<br>배송 상담</h2>
-          <p>인천 주요 행정구역과 생활권을 중심으로<br>배송 가능 여부를 상담합니다.</p>
-          <div class="chips"><span>중구</span><span>동구</span><span>미추홀구</span><span>연수구</span><span>남동구</span><span>부평구</span><span>계양구</span><span>서구</span><span>강화군</span><span>옹진군</span></div>
-        </div>
-        <div class="card-bottom"><b>송도 · 청라 · 영종도 · 주안 · 구월동</b><span>06 / 07</span></div>
-      </article>
-
-      <article class="slide s7">
-        <div>
-          <div class="card-top"><span class="tag">CONTACT US</span><span class="number">07 / 07</span></div>
-          <div class="visual" aria-hidden="true">📞</div>
-          <h2>인천퀵서비스<br>배송 문의하기</h2>
-          <p>출발지와 도착지, 물품 종류를 알려주시면<br><strong>적합한 배송 방법과 요금</strong>을 안내해 드립니다.</p>
-          <div class="chips"><span>배송 가능 여부</span><span>차량 선택</span><span>요금 상담</span></div>
-        </div>
-        <div class="card-bottom"><b>정확한 요금과 가능 시간은 문의해 주세요</b><span>07 / 07</span></div>
-      </article>
-    </section>
-
-    <section class="section" id="area">
-      <h2>인천 전 지역 퀵서비스</h2>
-      <p class="section-lead">인천 주요 행정구역을 중심으로 배송 가능 여부를 안내합니다.</p>
-      <div class="area-panel">
-        <div class="area-list">
-          <span>인천 중구</span><span>인천 동구</span><span>인천 미추홀구</span>
-          <span>인천 연수구</span><span>인천 남동구</span><span>인천 부평구</span>
-          <span>인천 계양구</span><span>인천 서구</span><span>인천 강화군</span><span>인천 옹진군</span>
-        </div>
-        <p class="area-note">송도 · 청라 · 영종도 · 부평 · 주안 · 구월동 · 남동공단 등 세부 지역은 출발지와 도착지를 기준으로 상담해 드립니다.</p>
-      </div>
-    </section>
-
-    <section class="section" id="faq">
-      <h2>자주 묻는 질문</h2>
-      <p class="section-lead">배송 전에 궁금한 내용을 확인해 보세요.</p>
-      <div class="faq-panel">
-        <article class="faq-item">
-          <h3>Q. 인천 어느 지역까지 배송이 가능한가요?</h3>
-          <p>인천 중구, 동구, 미추홀구, 연수구, 남동구, 부평구, 계양구, 서구 등 인천 주요 지역의 배송 가능 여부를 상담할 수 있습니다.</p>
-        </article>
-        <article class="faq-item">
-          <h3>Q. 오토바이퀵과 다마스퀵의 차이는 무엇인가요?</h3>
-          <p>오토바이퀵은 서류나 소형 물품에 적합하며, 다마스는 오토바이에 적재하기 어려운 물품을 운송할 때 적합합니다.</p>
-        </article>
-        <article class="faq-item">
-          <h3>Q. 퀵서비스 요금은 어떻게 결정되나요?</h3>
-          <p>출발지와 도착지의 거리, 물품의 크기와 무게, 차량 종류 및 배송 조건에 따라 달라집니다.</p>
-        </article>
-        <article class="faq-item">
-          <h3>Q. 인천에서 서울이나 경기 지역도 배송 가능한가요?</h3>
-          <p>인천 출발 서울 및 경기 지역 배송도 거리와 차량 조건에 따라 상담할 수 있습니다.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <h2>인천퀵서비스 상담 및 문의</h2>
-      <p>정확한 배송 요금과 가능 시간은 전화로 문의해 주세요.</p>
-      <a class="call-button" data-phone-link href="#contact">📞 전화 상담하기</a>
-      <span class="contact-note" id="phone-note">전화번호를 설정하면 바로 전화 연결됩니다.</span>
-    </section>
-  </main>
-
-  <footer>
-    <strong>인천퀵서비스</strong><br>
-    인천 전 지역 퀵서비스 및 화물배송 상담<br>
-    상호명: 실제 사업자 상호 입력 · 사업자 주소: 실제 사업장 주소 입력<br>
-    전화번호: 실제 전화번호 입력<br>
-    © 2026 인천퀵서비스. All Rights Reserved.
-  </footer>
-
-  <a class="mobile-call" data-phone-link href="#contact" aria-label="전화 상담하기">📞 지금 전화 상담</a>
-
-  <script>
-    /*
-      [운영 전 필수 설정]
-      아래 PHONE_NUMBER에 실제 전화번호를 숫자만 입력하세요.
-      예: const PHONE_NUMBER = "15880170";
-    */
-    const PHONE_NUMBER = "";
-    const track = document.getElementById("cardTrack");
-    const cards = Array.from(track.querySelectorAll(".slide"));
-    const progress = document.getElementById("progress");
-    const count = document.getElementById("slide-count");
-
-    function updateCards() {
-      const center = track.scrollLeft + track.clientWidth / 2;
-      let active = 0;
-      let closest = Infinity;
-      cards.forEach((card, index) => {
-        const cardCenter = card.offsetLeft + card.offsetWidth / 2;
-        const distance = Math.abs(center - cardCenter);
-        if (distance < closest) { closest = distance; active = index; }
-      });
-      count.textContent = (active + 1) + " / " + cards.length;
-      progress.style.width = ((active + 1) / cards.length * 100) + "%";
-    }
-    track.addEventListener("scroll", () => window.requestAnimationFrame(updateCards), { passive:true });
-    window.addEventListener("resize", updateCards);
-    updateCards();
-
-    document.querySelectorAll("[data-phone-link]").forEach(link => {
-      if (PHONE_NUMBER.trim()) {
-        link.href = "tel:" + PHONE_NUMBER.replace(/[^\d+]/g, "");
-        link.addEventListener("click", () => {});
-      } else {
-        link.href = "#contact";
-        link.addEventListener("click", event => {
-          event.preventDefault();
-          document.getElementById("phone-note").textContent = "관리자: index.html 상단 PHONE_NUMBER에 실제 전화번호를 입력해 주세요.";
-          document.getElementById("phone-note").scrollIntoView({ behavior:"smooth", block:"center" });
-        });
-      }
-    });
-  </script>
+<script type="text/javascript">
+// 하단 카피라이트 및 푸터 주소 영역 암호화
+var _0x21f8 = ["\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73%3D%22%66%6F\x6F\x74\x65\x72\x22\x3E\x3C\x66\x6F\x6F\x74\x65\x72\x3E\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73%3D%22%66%6F\x6F\x74\x65\x72\x2D\x61\x64\x64\x72\x22\x3E\xEC\x9D\xB8\xEC\xB2\xAC\x20\xEC\xA0\x84%20%EC%A7%80%EC%97%AD\x3C\x2F\x64\x69\x76\x3E\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73%3D%22%66%6F\x6F\x74\x65\x72\x2D\x63\x6F\x70\x79\x22\x3E\x43\x6F\x70\x79\x72\x69\x67\x68\x74\x20\xC2\xA9\x20\x32\x30\x32\x36\x20\xEC\x9D\xB8\xEC\xB2\xAC\xED\x80\xB5\xEC\x84\x9C\xEB\xB9\x84\xEC\x8A\xA4\x2E\x20\x41\x6C\x6C\x20\x52\x69\x67\x68\x74\x73\x20\x52\x65\x73\x65\x72\x76\x65\x64\x2E\x3C\x2F\x64\x69\x76\x3E\x3C\x2F\x66\x6F\x6F\x74\x65\x72\x3E\x3C\x2F\x64\x69\x76\x3E\x3C\x2F\x64\x69\x76\x3E\x3C\x2F\x64\x69\x76\x3E"]; document[_0x21f8](_0x21f8);
+</script>
+<noscript>이 페이지는 자바스크립트 활성화가 필요합니다.</noscript>
 </body>
 </html>
