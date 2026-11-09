@@ -9,77 +9,89 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.yourdomain.com/">
 
-    <!-- Open Graph (네이버 블로그, 카카오톡, 페이스북 공유 최적화) -->
+    <!-- Open Graph (SEO 최적화) -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="가평퀵서비스 - 24시 전국 당일특급 연계배송">
     <meta property="og:description" content="가평, 서울, 경기, 인천 전지역 오토바이·차량 퀵배송, 24시간 상담 1661-4262">
     <meta property="og:image" content="images/logo.png">
-    <meta property="og:url" content="https://www.yourdomain.com/">
 
-    <!-- 트위터 카드리 -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="가평퀵서비스 - 24시 전국 당일특급 연계배송">
-    <meta name="twitter:description" content="가평, 서울, 경기, 인천 전지역 오토바이·차량 퀵배송, 24시간 상담 1661-4262">
-    <meta name="twitter:image" content="images/logo.png">
+    <!-- 복구용 자체 내장 CSS (외부 파일 없이도 안 깨짐) -->
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Noto Sans KR', sans-serif; color: #333; background-color: #f9f9f9; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
 
-    <!-- 구조화된 데이터 (구글 리치 리절트 / 검색엔진 인지용 Schema.org) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "가평퀵서비스 (에이플러스퀵서비스)",
-      "image": "images/logo.png",
-      "telephone": "1661-4262",
-      "url": "https://www.yourdomain.com/",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "가평, 서울, 경기, 인천 전지역",
-        "addressLocality": "가평군",
-        "addressRegion": "경기도",
-        "addressCountry": "KR"
-      },
-      "priceRange": "$$",
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
-        ],
-        "opens": "00:00",
-        "closes": "23:59"
-      }
-    }
-    </script>
+        .wrapper { width: 100%; }
+        .wrapper-inner { max-width: 1080px; margin: 0 auto; background: #fff; padding: 20px; }
+
+        /* Header */
+        header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; border-bottom: 2px solid #ee3124; padding-bottom: 15px; }
+        .comp-name { font-size: 0.9rem; color: #666; width: 100%; margin-bottom: 5px; }
+        .logo img { max-height: 50px; }
+        .header-tel { font-size: 1.5rem; font-weight: bold; color: #ee3124; display: flex; align-items: center; gap: 5px; }
+        .header-tel img { width: 24px; height: 24px; }
+
+        /* Navigation */
+        .nav { width: 100%; margin-top: 15px; background: #333; }
+        .primary-menu { display: flex; justify-content: space-around; }
+        .primary-menu li a { display: block; padding: 12px 20px; color: #fff; font-weight: bold; font-size: 1rem; }
+        .primary-menu li a:hover { background: #ee3124; }
+        .mobile-menu { display: none; padding: 10px; background: #eee; }
+        .mobile-menu select { width: 100%; padding: 8px; font-size: 1rem; }
+
+        /* Main Content & Banner */
+        .main-content { margin-top: 20px; }
+        .slider-placeholder { width: 100%; background: #2b303a; color: #fff; text-align: center; padding: 60px 20px; border-radius: 8px; margin-bottom: 25px; }
+        .slider-placeholder h2 { font-size: 2rem; margin-bottom: 10px; color: #ffeb3b; }
+
+        /* 4개 서비스 카드 (Grid Layout) */
+        .front-table { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; margin-bottom: 30px; }
+        .front-table article { background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 20px; text-align: center; transition: transform 0.2s, box-shadow 0.2s; }
+        .front-table article:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .front-table img { width: 64px; height: 64px; margin-bottom: 15px; }
+        .table-h5 { font-size: 1.25rem; color: #111; margin-bottom: 10px; }
+        .table-desc { font-size: 0.9rem; color: #666; word-break: keep-all; }
+
+        /* Footer */
+        .footer { border-top: 1px solid #ddd; padding-top: 20px; text-align: center; font-size: 0.9rem; color: #666; }
+        .footer-addr { margin-bottom: 8px; }
+        .footer .tel a { font-weight: bold; color: #ee3124; font-size: 1.1rem; }
+        .footer-copy { font-size: 0.8rem; color: #999; }
+
+        /* 반응형 모바일 설정 */
+        @media (max-width: 768px) {
+            .primary-menu { display: none; }
+            .mobile-menu { display: block; }
+            .header-tel { font-size: 1.2rem; }
+            .slider-placeholder h2 { font-size: 1.4rem; }
+        }
+    </style>
 </head>
 <body>
-<div class="wrapper bg-cf">
+<div class="wrapper">
     <div class="wrapper-inner">
         <header>
             <h1 class="comp-name">가평퀵서비스 - 오토바이·차량 퀵 및 전국 당일특급 배송</h1>
-            <div class="clear"></div>
             <div class="logo">
                 <a href="/" title="가평퀵서비스 메인으로 이동">
                     <img src="images/logo.png" alt="가평퀵서비스 로고" />
                 </a>
             </div>
-            
             <a href="tel:1661-4262" class="header-tel" title="가평퀵서비스 전화걸기 (1661-4262)">
-                <img src="images/phone.png" alt="전화기 아이콘">1661-4262
+                <img src="images/phone.png" alt="전화 아이콘"> 1661-4262
             </a>
-            <div class="clear"></div>
 
             <nav class="nav">
                 <ul class="primary-menu">
-                    <li id="menu-item-15" class="menu-item"><a href="sub/sub01.html">회사소개</a></li>
-                    <li id="menu-item-19" class="menu-item"><a href="sub/sub02.html">오토바이 퀵서비스</a></li>
-                    <li id="menu-item-62" class="menu-item"><a href="sub/sub03.html">차량 퀵서비스</a></li>
-                    <li id="menu-item-63" class="menu-item"><a href="sub/sub04.html">전국당일특급연계배송</a></li>
-                    <li id="menu-item-64" class="menu-item"><a href="sub/sub05.html">고객센터</a></li>
+                    <li><a href="sub/sub01.html">회사소개</a></li>
+                    <li><a href="sub/sub02.html">오토바이 퀵서비스</a></li>
+                    <li><a href="sub/sub03.html">차량 퀵서비스</a></li>
+                    <li><a href="sub/sub04.html">전국당일특급연계배송</a></li>
+                    <li><a href="sub/sub05.html">고객센터</a></li>
                 </ul>
-            </nav>
-
-            <div class="mobile-menu">
-                <div id="mb-menu">
-                    <select title="메뉴 선택" name="page_id" id="page_id" onChange="javascript:location.href=this.options[this.selectedIndex].value;">
+                <div class="mobile-menu">
+                    <select title="메뉴 선택" onChange="javascript:location.href=this.options[this.selectedIndex].value;">
                         <option value="/">:::: MENU 선택 ::::</option>
                         <option value="/">HOME</option>
                         <option value="sub/sub01.html">회사소개</option>
@@ -89,71 +101,53 @@
                         <option value="sub/sub05.html">고객센터</option>
                     </select>
                 </div>
-            </div>
+            </nav>
         </header>
 
         <main class="main-content">
-            <section class="slider">
-                <script data-cfasync="false" type="text/javascript">
-                    var lsjQuery = jQuery;
-                    lsjQuery(document).ready(function() { 
-                        if(typeof lsjQuery.fn.layerSlider == "undefined") { 
-                            lsShowNotice('layerslider_1_1','jquery'); 
-                        } else { 
-                            lsjQuery("#layerslider_1_1").layerSlider({skinsPath: ''}); 
-                        } 
-                    });
-                </script>
-                <div id="layerslider_1_1" class="ls-wp-container" style="width:1030px;height:514px;margin:0 auto;">
-                    <div class="ls-slide" data-ls="transition2d: all;">
-                        <img src="images/slider00.png" class="ls-bg" alt="가평 퀵서비스 배송 슬라이드 배경" />
-                        <img class="ls-l" style="top:0px;left:0px;white-space: nowrap;" data-ls="delayin:1000;" src="images/slider01.png" alt="신속한 오토바이 퀵서비스">
-                        <img class="ls-l" style="top:0px;left:0px;white-space: nowrap;" data-ls="delayin:2000;" src="images/slider02.png" alt="안전한 차량 퀵배송">
-                        <img class="ls-l" style="top:0px;left:0px;white-space: nowrap;" data-ls="delayin:3000;" src="images/slider03.png" alt="전국 당일 특급 배송">
-                        <img class="ls-l" style="top:0px;left:0px;white-space: nowrap;" data-ls="delayin:4200;" src="images/slider04.png" alt="24시간 고객센터 1661-4262">
-                    </div>
-                </div>
+            <!-- 메인 배너 영역 (스크립트 에러 방지용 모던 메인 비주얼) -->
+            <section class="slider-placeholder">
+                <h2>빠르고 안전한 가평 24시 퀵서비스</h2>
+                <p>서울·경기·인천 전지역 1~2시간 이내 신속 배송 / 전국 당일 특급 연계</p>
             </section>
 
-            <div class="clear"></div>
-
+            <!-- 주요 서비스 안내 -->
             <section class="front-table">
                 <article>
-                    <a href="sub/sub02.html" title="오토바이 퀵서비스 상세페이지 이동">
+                    <a href="sub/sub02.html">
                         <img src="images/bike-icon.png" alt="오토바이 퀵서비스 아이콘" />
                         <h2 class="table-h5">오토바이 퀵서비스</h2>
                         <p class="table-desc">근거리에서 1~2시간 내 배송하는 가장 일반적이고 신속한 서비스입니다.</p>
                     </a>
                 </article>
                 <article>
-                    <a href="sub/sub03.html" title="차량 퀵서비스 상세페이지 이동">
+                    <a href="sub/sub03.html">
                         <img src="images/truck-icon.png" alt="차량 퀵서비스 아이콘" />
                         <h2 class="table-h5">차량 퀵서비스</h2>
                         <p class="table-desc">오토바이로 배송이 어려운 대형 물품 또는 장거리 배송에 적합한 서비스입니다.</p>
                     </a>
                 </article>
                 <article>
-                    <a href="sub/sub04.html" title="전국당일특급연계배송 상세페이지 이동">
+                    <a href="sub/sub04.html">
                         <img src="images/rocket-icon.png" alt="전국당일특급 연계배송 아이콘" />
                         <h2 class="table-h5">전국당일특급연계배송</h2>
                         <p class="table-desc">장거리 배송 시 가장 빠른 서비스로 최대 4~7시간이 소요됩니다.</p>
                     </a>
                 </article>
                 <article>
-                    <a href="sub/sub05.html" title="고객센터 안내 페이지 이동">
+                    <a href="sub/sub05.html">
                         <img src="images/call-icon.png" alt="고객센터 아이콘" />
                         <h2 class="table-h5">고객센터</h2>
                         <p class="table-desc">365일 24시간 친절 상담 가능합니다. 자세한 요금은 전화로 문의 바랍니다.</p>
                     </a>
                 </article>
             </section>
-            <div class="clear"></div>
         </main>
 
         <footer class="footer">
             <div class="footer-addr">
-                <span class="addr">서울, 경기, 인천, 가평 전지역 배송 가능</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="ceo">대표: 김상진</span><br />
-                <span class="tel"><a href="tel:1661-4262" title="1661-4262 전화 걸기">TEL : 1661-4262</a></span>
+                <span class="addr">서울, 경기, 인천, 가평 전지역</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="ceo">대표: 김상진</span><br />
+                <span class="tel"><a href="tel:1661-4262">TEL : 1661-4262</a></span>
             </div>
             <div class="footer-copy">
                 Copyright ⓒ 2004 에이플러스퀵서비스 All Rights Reserved
