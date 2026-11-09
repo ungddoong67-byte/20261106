@@ -44,18 +44,17 @@
   }
   </script>
 
-  <!-- 상단 메뉴 전용 내장 스타일 -->
+  <!-- 상단 메뉴 전용 내장 스타일 (투명 배경 적용) -->
   <style>
-    /* 상단 헤더 고정 스타일 */
+    /* 상단 헤더 투명 고정 스타일 */
     .site-header {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      background: rgba(0, 0, 0, 0.75);
-      backdrop-filter: blur(5px);
+      background: transparent; /* 메뉴바 배경 투명 처리 */
       z-index: 1000;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: none; /* 하단 경계선 제거 */
     }
     .header-inner {
       max-width: 1200px;
@@ -63,13 +62,14 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 12px 20px;
+      padding: 15px 20px;
     }
     .logo a {
       color: #fff;
       font-size: 1.3rem;
       font-weight: bold;
       text-decoration: none;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.5); /* 이미지 위에서도 잘 보이도록 텍스트 그림자 추가 */
     }
     .logo a span {
       color: #ffeb3b;
@@ -88,6 +88,7 @@
       text-decoration: none;
       font-size: 0.95rem;
       font-weight: 500;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.5);
       transition: color 0.3s;
     }
     .main-nav .menu-list a:hover {
@@ -97,8 +98,8 @@
     /* 모바일 햄버거 버튼 */
     .menu-toggle {
       display: none;
-      background: transparent;
-      border: 1px solid rgba(255,255,255,0.4);
+      background: rgba(0, 0, 0, 0.3); /* 터치 영역 인식용 은은한 반투명 */
+      border: 1px solid rgba(255,255,255,0.6);
       border-radius: 6px;
       padding: 6px 10px;
       cursor: pointer;
@@ -120,7 +121,7 @@
         top: 100%;
         left: 0;
         width: 100%;
-        background: rgba(0, 0, 0, 0.95);
+        background: rgba(0, 0, 0, 0.85); /* 모바일에서 메뉴 펼쳤을 때는 가독성을 위해 어둡게 처리 */
         border-bottom: 1px solid rgba(255,255,255,0.1);
       }
       .main-nav.active {
@@ -134,13 +135,14 @@
         display: block;
         padding: 15px 20px;
         border-top: 1px solid rgba(255, 255, 255, 0.05);
+        text-shadow: none;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- 상단 고정 헤더 & 네비게이션 메뉴 -->
+  <!-- 상단 고정 투명 헤더 & 네비게이션 메뉴 -->
   <header class="site-header">
     <div class="header-inner">
       <div class="logo">
